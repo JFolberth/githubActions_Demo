@@ -3,9 +3,10 @@ on:
   workflow_dispatch:
 jobs:
   call-reusable-workflow:​
-   runson: ubuntu-latest
-   name: composite-workflow
-   steps:
-    uses: ./.github/workflows/actions/composite-action.yml​
-    with:​
-      param1: 'Hello, world!'
+    runs-on: ubuntu-latest
+    name: composite-workflow
+    steps:
+      - id: composite_action
+        uses: ./.github/workflows/actions/composite-action.yml​
+        with:​
+          param1: 'Hello, world!'
