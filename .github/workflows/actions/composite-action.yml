@@ -1,7 +1,13 @@
 name: 'My Composite Action​'
 description: 'This action runs multiple steps'
+
+inputs:
+  param1:
+    description: 'Parameter based from calling workflow'
+    required: false
+    default: 'Class'
 runs:
   using: "composite"​
   steps:
-   - run: echo "Step 1"
-   - run: echo "Step 2"
+   - run: echo "Step 1 for ${{ inputs.param1 }}"
+   - run: echo "Step 2 ${{ inputs.param1 }}"
