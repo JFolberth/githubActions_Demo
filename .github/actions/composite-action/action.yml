@@ -8,4 +8,5 @@ runs:
   using: 'composite'
   steps:
    - name: Run script
+     shell: bash
      run: echo "Step 1 for ${{ inputs.param1 }}"
