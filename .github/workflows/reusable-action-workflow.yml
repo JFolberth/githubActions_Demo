@@ -2,11 +2,13 @@ name: 'Caller Workflow​'
 on:
   workflow_dispatch:
 jobs:
-  call-reusable-workflow:​
+  call-reusable-workflow:
     runs-on: ubuntu-latest
     name: composite-workflow
+    environment: development
     steps:
+      - uses: actions/checkout@v3
       - id: composite_action
         uses: ./.github/workflows/actions/composite-action.yml​
         with:​
-          param1: 'Hello, world!'
+         param1: 'Hello, world!'
