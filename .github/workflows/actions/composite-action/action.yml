@@ -4,10 +4,9 @@ description: 'This action runs multiple steps'
 inputs:
   param1:
     description: 'Parameter based from calling workflow'
-    required: false
-    default: 'Class'
+    required: true
 runs:
   using: "composite"​
   steps:
    - run: echo "Step 1 for ${{ inputs.param1 }}"
-   - run: echo "Step 2 ${{ inputs.param1 }}"
+   - run: echo "Step 2 for ${{ inputs.param1 }}"
