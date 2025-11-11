@@ -9,6 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - id: composite_action
-        uses: ./.github/workflows/actions/composite-action
+        uses: ./.github/actions/composite-action
         with:
          param1: 'Hello, world!'
