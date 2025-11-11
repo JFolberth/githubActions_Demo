@@ -4,7 +4,6 @@ description: 'This action runs multiple steps'
 inputs:
   param1:
     description: 'Parameter based from calling workflow'
-    required: true
 runs:
   using: 'composite'​
   steps:
