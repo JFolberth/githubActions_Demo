@@ -1,4 +1,4 @@
-name: CI Build for Docker Action
+name: Build for Docker Action
 on:
   workflow_dispatch:
 
